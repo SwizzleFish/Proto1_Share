@@ -34,7 +34,7 @@ show_player:
       speed: 1
   balldevice_bd_plunger_ball_enter:
     LaunchLightUp_01:
-      speed: 2
+      speed: 3
       loops: 0
       priority: 100
     
@@ -89,7 +89,7 @@ shots:
         switch: s_l_outlane
         show_tokens:
             led: led_l_outlane
-        profile: profile_spinner
+        profile: profile_insert
     shot_l_inlane:
         switch: s_l_inlane
         show_tokens:
