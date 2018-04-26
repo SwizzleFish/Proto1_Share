@@ -62,9 +62,6 @@ slide_player:
 
 
 sequence_shots:
-    right_orbit:
-        switch_sequence: s_r_spinner, s_l_spinner
-        sequence_timeout: 2s
     left_ramp:
         switch_sequence: s_l_rampenter, s_l_rampexit
         sequence_timeout: 2s
