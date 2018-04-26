@@ -1,0 +1,26 @@
+#config_version=5
+
+displays:
+  window:  # on screen window
+    width: 400
+    height: 800
+
+window:
+  width: 400
+  height: 800
+  title: Proto1Fucked
+  resizable: false
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+  source_display: window
+
+bcp:
+    debug: True
+    connections:
+        unity_display:
+            host: localhost
+            port: 9001
+            type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+            required: True
+            exit_on_close: True

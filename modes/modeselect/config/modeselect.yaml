@@ -1,0 +1,10 @@
+#config_version=5
+mode:
+    start_events: ball_started
+    stop_events: timer_intro_complete
+ 
+
+event_player:
+   mode_modeselect_started: mode_intro_start
+   #mode_modeselect_started{current_player.score < 10}: mode_intro_start
+  # mode_modeselect_started{current_player.score > 10}: mode_access_start  

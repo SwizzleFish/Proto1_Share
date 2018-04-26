@@ -1,0 +1,8 @@
+#config_version=5
+mode:
+    start_events: intro_access_selected
+    stop_events: timer_intro_complete
+ 
+show_player:
+  mode_access_started:
+    GI_Pink_01

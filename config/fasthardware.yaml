@@ -1,0 +1,317 @@
+#config_version=5
+
+hardware:
+    platform: fast
+    driverboards: fast
+    lights: fadecandy
+
+
+fast:
+  debug: false
+  ports: com20
+  default_normal_debounce_close: 3ms
+  default_normal_debounce_open: 3ms
+  default_quick_debounce_close: 3ms
+  default_quick_debounce_open: 3ms
+
+playfields:
+  playfield:
+     tags: default
+     default_source_device: bd_plunger
+
+   
+
+  
+switches:
+  # ---------------
+  # HARDWARE / SWITCHES / CABINET
+  # ---------------
+  s_flipper_left_b:
+    number: 0
+    tags: player, flipper_left_b
+  s_flipper_left:
+    number: 1
+    tags: player, left_flipper
+  s_flipper_right_b:
+    number: 2
+    tags: player, flipper_right_b
+  s_flipper_right:
+    number: 3
+    tags: player, right_flipper
+  s_start:
+    number: 4
+    tags: start
+  s_launch:
+    number: 5
+  s_coinup:
+    number: 6
+  s_trough_1:
+    number: 8
+    type: NC
+  s_trough_2:
+    number: 9
+    type: NC
+  s_trough_3:
+    number: 10
+    type: NC
+  s_trough_jam:
+    number: 14
+    type: NC
+  s_plunger_lane:
+    number: 15
+  # ---------------
+  # HARDWARE / SWITCHES / PLAYFIELD
+  # ---------------
+  s_l_sling:
+    number: 16
+  s_l_inlane:
+    number: 17
+  s_l_outlane:
+    number: 18
+  s_l_low:
+    number: 19
+  s_r_sling:
+    number: 20
+  s_r_inlane:
+    number: 21
+  s_r_outlane:
+    number: 22
+  s_drop1:
+    number: 24
+  s_drop2:
+    number: 25
+  s_drop3:
+    number: 26
+  s_drop4:
+    number: 27
+  s_l_captive:
+    number: 28
+  s_l_rampentry_L:
+    number: 29
+  s_l_rampentry_R:
+    number: 30
+  s_l_spinner:
+    number: 31
+    type: NC
+  s_l_rampenter:
+    number: 32
+    type: NC
+  s_l_rampexit:
+    number: 33
+    type: NC
+  s_r_22:
+    number: 38
+  s_centercaptive:
+    number: 40
+  s_r_ring1:
+    number: 41
+  s_r_ring2:
+    number: 42
+  s_r_ring3:
+    number: 43
+  s_r_ring4:
+    number: 44
+  s_r_ramp_entry:
+    number: 46
+  s_r_behindflip:
+    number: 45
+  s_r_ramp:
+    number: 47
+    type: NC
+  s_rollover_r:
+    number: 48
+  s_scoop:
+    number: 49
+    type: NC
+  s_dropcenter:
+    number: 50
+    type: NC
+  s_r_spinner:
+    number: 51
+  s_r_captive_01:
+    number: 52
+  s_r_captive_02:
+    number: 53
+  s_rollover_l:
+    number: 54
+  s_secretlane:
+    number: 55
+    type: NC
+
+
+combo_switches:
+    combo_leftflips_hold:
+        switches_1: s_flipper_left
+        switches_2: s_flipper_left_b
+        hold_time: 3s
+
+
+
+
+coils:
+  # ---------------
+  # HARDWARE / COILS / PLAYFIELD
+  # ---------------
+    c_flipper_left_main:
+        number: 4
+        default_pulse_ms: 30
+    c_flipper_left_hold:
+        number: 5
+        default_pulse_ms: 25
+        allow_enable: true
+    c_sling_left:
+        number: 6
+    c_flipper_right_main:
+        number: 7
+        default_pulse_ms: 30
+    c_flipper_right_hold:
+        number: 8
+        default_pulse_ms: 25
+        allow_enable: true
+    c_sling_right:
+        number: 9
+    c_trough_eject:
+        number: 10
+        default_pulse_ms: 25
+    c_plunger:
+        number: 11
+        default_pulse_ms: 20
+    c_drop_reset:
+        number: 12
+        default_pulse_ms: 15
+    c_flipper_upper_left_main:
+        number: 13
+        default_pulse_ms: 25
+    c_flipper_upper_left_hold:
+        number: 14
+        allow_enable: true
+    c_flipper_upper_right_main:
+        number: 15
+        default_pulse_ms: 20
+    c_flipper_upper_right_hold:
+        number: 16
+        allow_enable: true
+    c_scoop:
+        number: 20
+        default_pulse_ms: 25
+    c_dropcenter_reset:
+        number: 21
+        default_pulse_ms: 15
+    c_dropcenter_knockdown:
+        number: 22       
+    c_magnet_ring:
+        number: 23
+        default_pulse_ms: 20
+        default_hold_power: .5
+        allow_enable: true
+        
+magnets:
+    magnet_ring:
+        magnet_coil: c_magnet_ring
+        grab_switch: s_r_ring1
+        enable_events: ball_started
+        disable_events: magnet_ring_disable, ball_ended
+        release_ball_events: magnet_ring_release
+        fling_ball_events: magnet_ring_fling
+        debug: false
+
+        
+autofire_coils:
+    right_sling:
+        coil: c_sling_right
+        switch: s_r_sling
+    left_sling:
+        coil: c_sling_left
+        switch: s_l_sling
+
+drop_targets:
+    drop1:
+        debug: false
+        switch: s_drop1
+    drop2:
+        debug: false
+        switch: s_drop2
+    drop3:
+        debug: false
+        switch: s_drop3
+    drop4:
+        debug: false
+        switch: s_drop4
+    dropcenter:
+        debug: false
+        switch: s_dropcenter
+        knockdown_coil: c_dropcenter_knockdown
+        knockdown_events: balldevice_bd_scoop_ball_entered, multiball_lock_theshop_full
+        
+drop_target_banks:
+    right_bank:
+        debug: false
+        drop_targets: drop1, drop2, drop3, drop4
+        reset_coils: c_drop_reset
+        reset_events: ball_starting, machine_reset_phase_3
+        reset_on_complete: 1s
+    center_bank:
+        debug: false
+        drop_targets: dropcenter
+        reset_coils: c_dropcenter_reset
+        reset_events: ball_starting, machine_reset_phase_3
+        reset_on_complete: 5s
+
+ 
+ball_devices:
+    bd_trough:
+        ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_jam
+        entrance_count_delay: 0.5s        
+        eject_coil: c_trough_eject
+        tags: trough, home, drain
+        jam_switch: s_trough_jam
+        eject_coil_jam_pulse: 30ms
+        eject_targets: bd_plunger
+        eject_timeouts: 2s    
+        
+    bd_plunger:
+        ball_switches: s_plunger_lane
+        eject_coil: c_plunger
+        confirm_eject_type: target
+        max_eject_attempts: 3
+        eject_targets: playfield
+        player_controlled_eject_event: s_launch_active
+        eject_timeouts: 3s
+        
+    bd_scoop:
+        ball_switches: s_scoop
+        eject_coil: c_scoop
+        tags: scoop
+        entrance_count_delay: 500ms
+        eject_targets: playfield
+            
+        
+flippers:
+    flipper_left:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_flipper_left
+        disable_events: ball_ended
+        enable_events: mode_base_started
+    flipper_upper_left:
+        main_coil: c_flipper_upper_left_main
+        hold_coil: c_flipper_upper_left_hold
+        activation_switch: s_flipper_left
+        disable_events: ball_ended
+        enable_events: mode_base_started
+    flipper_right:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_flipper_right
+        disable_events: ball_ended
+        enable_events: mode_base_started
+    flipper_upperright:
+        main_coil: c_flipper_upper_right_main
+        hold_coil: c_flipper_upper_right_hold
+        activation_switch: s_flipper_right
+        disable_events: ball_ended
+        enable_events: mode_base_started
+        
+
+
+        

@@ -1,0 +1,22 @@
+#config_version=5
+
+game:
+    balls_per_game: 3
+
+config:
+    - fasthardware.yaml
+    - leds.yaml
+    - display.yaml
+
+
+machine:
+  balls_installed: 3
+  min_balls: 3 
+  
+modes:
+   - attract
+   - base
+   - bonus
+   - access
+   - 30flips
+   - high_score

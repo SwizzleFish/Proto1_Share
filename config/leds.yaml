@@ -1,0 +1,883 @@
+#config_version=5
+
+light_settings:
+    default_fade_ms: 150
+    
+
+
+# ------
+# Channel 0 Leds (0-63)
+# ------
+
+lights:
+    l_led0:
+        number: 0
+        tags: led_all, led_inserts, led_scoop
+        type: grb
+    l_led1:
+        number: 1
+        tags: led_all, led_inserts, led_scoop
+        type: grb
+    l_led2:
+        number: 2
+        tags: led_all, led_inserts, led_scoop
+        type: grb
+    l_led3:
+        number: 3
+        tags: led_all, led_inserts, led_leftramp
+        type: grb
+    l_led4:
+        number: 4
+        tags: led_all, led_inserts, led_leftramp
+        type: grb
+    l_led5:
+        number: 5
+        tags: led_all, led_inserts, led_leftramp
+        type: grb
+    l_led6:
+        number: 6
+        tags: led_all, led_inserts, led_leftramp
+        type: grb
+    l_led7:
+        number: 7
+        tags: led_all, led_inserts, led_leftramp
+        type: grb
+    l_led8:
+        number: 8
+        tags: led_all, led_l_spinner
+        type: grb
+    l_led9:
+        number: 9
+        tags: led_all, led_inserts, led_l_mid
+        type: grb
+    l_led10:
+        number: 10
+        tags: led_all, led_inserts, led_l_mid
+        type: grb
+    l_led11:
+        number: 11
+        tags: led_all, led_inserts, led_l_mid
+        type: grb
+    l_led12:
+        number: 12
+        tags: led_all, led_inserts, led_l_mid
+        type: grb
+    l_led13:
+        number: 13
+        tags: led_all, led_inserts, led_insert_l_low
+        type: grb
+    l_led14:
+        number: 14
+        tags: led_all, led_inserts, led_l_outlane
+        type: grb
+    l_led15:
+        number: 15
+        tags: led_all, led_inserts, led_l_inlane
+        type: grb
+    l_led16:
+        number: 16
+        tags: led_all, led_l_sling
+        type: grb
+    l_led17:
+        number: 17
+        tags: led_all, led_l_sling
+        type: grb
+    l_led18:
+        number: 18
+        tags: led_all, led_l_sling
+        type: grb
+    l_led19:
+        number: 19
+        tags: led_all, led_l_sling
+        type: grb
+    l_led20:
+        number: 20
+        tags: led_all, led_l_sling
+        type: grb
+    l_led21:
+        number: 21
+        tags: led_all, led_r_sling
+        type: grb
+    l_led22:
+        type: grb
+        number: 22
+        tags: led_all, led_r_sling
+    l_led23:
+        type: grb
+        number: 23
+        tags: led_all, led_r_sling
+    l_led24:
+        type: grb
+        number: 24
+        tags: led_all, led_r_sling
+    l_led25:
+        type: grb
+        number: 25
+        tags: led_all, led_r_sling
+    l_led26:
+        type: grb
+        number: 26
+        tags: led_all, led_r_inlane
+    l_led27:
+        type: grb
+        number: 27
+        tags: led_all, led_r_outlane
+    l_led28:
+        type: grb
+        number: 28
+        tags: led_all, led_drop1
+    l_led29:
+        type: grb
+        number: 29
+        tags: led_all, led_drop2
+    l_led30:
+        type: grb
+        number: 30
+        tags: led_all, led_drop3
+    l_led31:
+        type: grb
+        number: 31
+        tags: led_all, led_drop4
+    l_led32:
+        type: grb
+        number: 32
+        tags: led_all, led_r_spinner
+    l_led33:
+        type: grb
+        number: 33
+        tags: led_all, led_r_captive, l_r_captivering
+    l_led34:
+        type: grb
+        number: 34
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led35:
+        type: grb
+        number: 35
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led36:
+        type: grb
+        number: 36
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led37:
+        type: grb
+        number: 37
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led38:
+        type: grb
+        number: 38
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led39:
+        type: grb
+        number: 39
+        tags: led_all, led_inserts, led_r_captive, l_r_captivering
+    l_led40:
+        type: grb
+        number: 40
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_1
+    l_led41:
+        type: grb
+        number: 41
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_2
+    l_led42:
+        type: grb
+        number: 42
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_3
+    l_led43:
+        type: grb
+        number: 43
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_4
+    l_led44:
+        type: grb
+        number: 44
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_5
+    l_led45:
+        type: grb
+        number: 45
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_6
+    l_led46:
+        type: grb
+        number: 46
+        tags: led_all, led_inserts, led_r_captive, l_r_captive_7
+    l_led47:
+        type: grb
+        number: 47
+        tags: led_all, led_inserts, led_r_ramp_entry
+    l_led48:
+        type: grb
+        number: 48
+        tags: led_all, led_inserts, led_l_rollover
+    l_led49:
+        type: grb
+        number: 49
+        tags: led_all, led_inserts, led_r_rollover
+    l_led50:
+        type: grb
+        number: 50
+        tags: led_all, led_inserts, led_upperring, led_upperring_3
+    l_led51:
+        type: grb
+        number: 51
+        tags: led_all, led_inserts, led_upperring, led_upperring_2
+    l_led52:
+        type: grb
+        number: 52
+        tags: led_all, led_inserts, led_upperring, led_upperring_1
+    l_led53:
+        type: grb
+        number: 53
+        tags: led_all, led_inserts, led_l_ramp
+    l_led54:
+        type: grb
+        number: 54
+        tags: led_all, led_inserts, led_l_ramp
+    l_led55:
+        type: grb
+        number: 55
+        tags: led_all, led_inserts, led_l_ramp
+    l_led56:
+        type: grb
+        number: 56
+        tags: led_all, led_inserts, led_l_ramp
+    l_led57:
+        type: grb
+        number: 57
+        tags: led_all, led_inserts, led_l_ramp
+
+# ------
+# Channel 1 Leds (64-127)
+# ------
+    l_led64:
+        type: grb
+        number: 64
+        tags: led_all, led_llamp
+    l_led65:
+        type: grb
+        number: 65
+        tags: led_all, led_llamp
+    l_led66:
+        type: grb
+        number: 66
+        tags: led_all, led_llamp
+    l_led67:
+        type: grb
+        number: 67
+        tags: led_all, led_llamp
+    l_led68:
+        type: grb
+        number: 68
+        tags: led_all, led_llamp
+    l_led69:
+        type: grb
+        number: 69
+        tags: led_all, led_llamp
+    l_led70:
+        type: grb
+        number: 70
+        tags: led_all, led_llamp
+    l_led71:
+        type: grb
+        number: 71
+        tags: led_all, led_midlamp
+    l_led72:
+        type: grb
+        number: 72
+        tags: led_all, led_midlamp
+    l_led73:
+        type: grb
+        number: 73
+        tags: led_all, led_midlamp
+    l_led74:
+        type: grb
+        number: 74
+        tags: led_all, led_midlamp
+    l_led75:
+        type: grb
+        number: 75
+        tags: led_all, led_midlamp
+    l_led76:
+        type: grb
+        number: 76
+        tags: led_all, led_midlamp
+    l_led77:
+        type: grb
+        number: 77
+        tags: led_all, led_midlamp
+    l_led78:
+        type: grb
+        number: 78
+        tags: led_all, led_midlamp
+    l_led79:
+        type: grb
+        number: 79
+        tags: led_all, led_midlamp
+    l_led80:
+        type: grb
+        number: 80
+        tags: led_all, led_midlamp
+    l_led81:
+        type: grb
+        number: 81
+        tags: led_all, led_midlamp
+    l_led82:
+        type: grb
+        number: 82
+        tags: led_all, led_midlamp
+    l_led83:
+        type: grb
+        number: 83
+        tags: led_all, led_midlamp
+    l_led84:
+        type: grb
+        number: 84
+        tags: led_all, led_midlamp
+    l_led85:
+        type: grb
+        number: 85
+        tags: led_all, led_midlamp
+    l_led86:
+        type: grb
+        number: 86
+        tags: led_all, led_midlamp
+    l_led87:
+        type: grb
+        number: 87
+        tags: led_all, led_rlamp
+    l_led88:
+        type: grb
+        number: 88
+        tags: led_all, led_rlamp
+    l_led89:
+        type: grb
+        number: 89
+        tags: led_all, led_rlamp
+    l_led90:
+        type: grb
+        number: 90
+        tags: led_all, led_rlamp
+    l_led91:
+        type: grb
+        number: 91
+        tags: led_all, led_rlamp
+    l_led92:
+        type: grb
+        number: 92
+        tags: led_all, led_rlamp
+    l_led93:
+        type: grb
+        number: 93
+        tags: led_all, led_rlamp
+    l_led94:
+        type: grb
+        number: 94
+        tags: led_all, led_rsling
+    l_led95:
+        type: grb
+        number: 95
+        tags: led_all, led_rsling
+    l_led96:
+        type: grb
+        number: 96
+        tags: led_all, led_rsling
+    l_led97:
+        type: grb
+        number: 97
+        tags: led_all, led_rsling
+    l_led98:
+        type: grb
+        number: 98
+        tags: led_all, led_rsling
+    l_led99:
+        type: grb
+        number: 99
+        tags: led_all, led_rsling
+    l_led100:
+        type: grb
+        number: 100
+        tags: led_all, led_rsling
+    l_led101:
+        type: grb
+        number: 101
+        tags: led_all, led_rsling
+    l_led102:
+        type: grb
+        number: 102
+        tags: led_all, led_rsling
+    l_led103:
+        type: grb
+        number: 103
+        tags: led_all, led_rsling
+    l_led104:
+        type: grb
+        number: 104
+        tags: led_all, led_rsling
+    l_led105:
+        type: grb
+        number: 105
+        tags: led_all, led_rsling
+    l_led106:
+        type: grb
+        number: 106
+        tags: led_all, led_rsling
+    l_led107:
+        type: grb
+        number: 107
+        tags: led_all, led_lsling
+    l_led108:
+        type: grb
+        number: 108
+        tags: led_all, led_lsling
+    l_led109:
+        type: grb
+        number: 109
+        tags: led_all, led_lsling
+    l_led110:
+        type: grb
+        number: 110
+        tags: led_all, led_lsling
+    l_led111:
+        type: grb
+        number: 111
+        tags: led_all, led_lsling
+    l_led112:
+        type: grb
+        number: 112
+        tags: led_all, led_lsling
+    l_led113:
+        type: grb
+        number: 113
+        tags: led_all, led_lsling
+    l_led114:
+        type: grb
+        number: 114
+        tags: led_all, led_lsling
+    l_led115:
+        type: grb
+        number: 115
+        tags: led_all, led_lsling
+    l_led116:
+        type: grb
+        number: 116
+        tags: led_all, led_lsling
+    l_led117:
+        type: grb
+        number: 117
+        tags: led_all, led_lsling
+    l_led118:
+        type: grb
+        number: 118
+        tags: led_all, led_lsling
+    l_led119:
+        type: grb
+        number: 119
+        tags: led_all, led_lsling
+    l_led120:
+        type: grb
+        number: 120
+        tags: led_all, led_lsling
+    l_led121:
+        type: grb
+        number: 121
+        tags: led_all, led_lsling
+    l_led122:
+        type: grb
+        number: 122
+        tags: led_all, led_lsling
+
+# ------
+# Channel 2 Leds (128-191)
+# ------        
+        
+    l_led128:
+        number: 128
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led129:
+        number: 129
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led130:
+        number: 130
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led131:
+        number: 131
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led132:
+        number: 132
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led133:
+        number: 133
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led134:
+        number: 134
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led135:
+        number: 135
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led136:
+        number: 136
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led137:
+        number: 137
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led138:
+        number: 138
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led139:
+        number: 139
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led140:
+        number: 140
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led141:
+        number: 141
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led142:
+        number: 142
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led143:
+        number: 143
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led144:
+        number: 144
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led145:
+        number: 145
+        type: rgb
+        tags: led_all, led_gi_l_low
+    l_led146:
+        number: 146
+        type: rgb
+        tags: led_all, led_gi_l_low
+        
+# ------
+# Channel 3 Leds (192-255)
+# ------
+
+    l_led192:
+        type: grb
+        number: 192
+        tags: led_all, led_l_sling
+    l_led193:
+        type: grb
+        number: 193
+        tags: led_all, led_l_sling
+    l_led194:
+        type: grb
+        number: 194
+        tags: led_all, led_l_sling
+    l_led195:
+        type: grb
+        number: 195
+        tags: led_all, led_l_sling
+    l_led196:
+        type: grb
+        number: 196
+        tags: led_all, led_l_sling
+    l_led197:
+        type: grb
+        number: 197
+        tags: led_all, led_l_sling
+    l_led198:
+        type: grb
+        number: 198
+        tags: led_all, led_l_sling
+    l_led199:
+        type: grb
+        number: 199
+        tags: led_all, led_l_sling
+    l_led200:
+        type: grb
+        number: 200
+        tags: led_all, led_l_sling
+    l_led201:
+        type: grb
+        number: 201
+        tags: led_all, led_l_sling
+    l_led202:
+        type: grb
+        number: 202
+        tags: led_all, led_l_sling
+    l_led203:
+        type: grb
+        number: 203
+        tags: led_all, led_l_sling
+    l_led204:
+        type: grb
+        number: 204
+        tags: led_all, led_l_sling
+    l_led205:
+        type: grb
+        number: 205
+        tags: led_all, led_l_sling_jewel
+    l_led206:
+        type: grb
+        number: 206
+        tags: led_all, led_r_sling
+    l_led207:
+        type: grb
+        number: 207
+        tags: led_all, led_r_sling
+    l_led208:
+        type: grb
+        number: 208
+        tags: led_all, led_r_sling
+    l_led209:
+        type: grb
+        number: 209
+        tags: led_all, led_r_sling
+    l_led210:
+        type: grb
+        number: 210
+        tags: led_all, led_r_sling
+    l_led211:
+        type: grb
+        number: 211
+        tags: led_all, led_r_sling
+    l_led212:
+        type: grb
+        number: 212
+        tags: led_all, led_r_sling
+    l_led213:
+        type: grb
+        number: 213
+        tags: led_all, led_r_sling
+    l_led214:
+        type: grb
+        number: 214
+        tags: led_all, led_r_sling
+    l_led215:
+        type: grb
+        number: 215
+        tags: led_all, led_r_sling
+    l_led216:
+        type: grb
+        number: 216
+        tags: led_all, led_r_sling
+    l_led217:
+        type: grb
+        number: 217
+        tags: led_all, led_r_sling
+    l_led218:
+        type: grb
+        number: 218
+        tags: led_all, led_r_sling
+    l_led219:
+        type: grb
+        number: 219
+        tags: led_all, led_r_sling_jewel
+    l_led220:
+        type: grb
+        number: 220
+        tags: led_all, led_r_sling_projector
+    l_led221:
+        type: grb
+        number: 221
+        tags: led_all, led_r_drop1b
+    l_led222:
+        type: grb
+        number: 222
+        tags: led_all, led_r_drop2b
+    l_led223:
+        type: grb
+        number: 223
+        tags: led_all, led_r_drop3b
+    l_led224:
+        type: grb
+        number: 224
+        tags: led_all, led_r_drop4b
+    l_led225:
+        type: grb
+        number: 225
+        tags: led_all, led_r_spinner
+    l_led226:
+        type: grb
+        number: 226
+        tags: led_all, led_r_spinner
+    l_led227:
+        type: grb
+        number: 227
+        tags: led_all, led_r_spinner
+    l_led228:
+        type: grb
+        number: 228
+        tags: led_all, led_r_spinner
+    l_led229:
+        type: grb
+        number: 229
+        tags: led_all, led_r_spinner
+    l_led230:
+        type: grb
+        number: 230
+        tags: led_all, led_r_spinner
+    l_led231:
+        type: grb
+        number: 231
+        tags: led_all, led_r_spinner
+    l_led232:
+        type: grb
+        number: 232
+        tags: led_all, led_shooter
+    l_led233:
+        type: grb
+        number: 233
+        tags: led_all, led_drain
+    l_led234:
+        type: grb
+        number: 234
+        tags: led_all, led_drain_strip
+    l_led235:
+        type: grb
+        number: 235
+        tags: led_all, led_drain_strip
+    l_led236:
+        type: grb
+        number: 236
+        tags: led_all, led_drain_strip
+    l_led237:
+        type: grb
+        number: 237
+        tags: led_all, led_drain_strip
+    l_led238:
+        type: grb
+        number: 238
+        tags: led_all, led_drain_strip
+    l_led239:
+        type: grb
+        number: 239
+        tags: led_all, led_drain_strip
+    l_led240:
+        type: grb
+        number: 240
+        tags: led_all, led_drain_strip
+    l_led241:
+        type: grb
+        number: 241
+        tags: led_all, led_drain_strip
+    l_led242:
+        type: grb
+        number: 242
+        tags: led_all, led_drain_strip
+    l_led243:
+        type: grb
+        number: 243
+        tags: led_all, led_drain_strip
+        
+# ------
+# Channel 5 Leds (320-384)
+# ------        
+ 
+    l_led320:
+        type: grb
+        number: 320
+        tags: led_all, led_launch
+    l_led321:
+        type: grb
+        number: 321
+        tags: led_all, led_launch_strip
+    l_led322:
+        type: grb
+        number: 322
+        tags: led_all, led_launch_strip
+    l_led323:
+        type: grb
+        number: 323
+        tags: led_all, led_launch_strip
+    l_led324:
+        type: grb
+        number: 324
+        tags: led_all, led_launch_strip
+    l_led325:
+        type: grb
+        number: 325
+        tags: led_all, led_launch_strip
+    l_led326:
+        type: grb
+        number: 326
+        tags: led_all, led_launch_strip
+    l_led327:
+        type: grb
+        number: 327
+        tags: led_all, led_launch_strip
+    l_led328:
+        type: grb
+        number: 328
+        tags: led_all, led_launch_strip
+    l_led329:
+        type: grb
+        number: 329
+        tags: led_all, led_launch_strip
+    l_led330:
+        type: grb
+        number: 330
+        tags: led_all, led_launch_strip
+    l_led331:
+        type: grb
+        number: 331
+        tags: led_all, led_launch_strip
+    l_led332:
+        type: grb
+        number: 332
+        tags: led_all, led_launch_strip
+    l_led333:
+        type: grb
+        number: 333
+        tags: led_all, led_launch_strip
+    l_led334:
+        type: grb
+        number: 334
+        tags: led_all, led_launch_strip
+    l_led335:
+        type: grb
+        number: 335
+        tags: led_all, led_launch_strip
+    l_led336:
+        type: grb
+        number: 336
+        tags: led_all, led_launch_strip
+    l_led337:
+        type: grb
+        number: 337
+        tags: led_all, led_launch_strip
+    l_led338:
+        type: grb
+        number: 338
+        tags: led_all, led_launch_strip
+    l_led339:
+        type: grb
+        number: 339
+        tags: led_all, led_drain_strip
+    l_led340:
+        type: grb
+        number: 340
+        tags: led_all, led_drain_strip
+    l_led341:
+        type: grb
+        number: 341
+        tags: led_all, led_drain_strip
+    l_led342:
+        type: grb
+        number: 342
+        tags: led_all, led_drain_strip
+    l_led343:
+        type: grb
+        number: 343
+        tags: led_all, led_drain_strip
+    l_led344:
+        type: grb
+        number: 344
+        tags: led_all, led_drain_strip

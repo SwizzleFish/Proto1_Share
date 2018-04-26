@@ -1,0 +1,264 @@
+#config_version=5
+mode:
+    start_events: ball_started
+    stop_events: ball_ending 
+
+    
+multiball_locks:
+    theshop:
+        balls_to_lock: 1
+        lock_devices: bd_scoop    
+    
+multiballs:
+    quick_3_ball:
+        ball_count: 3
+        ball_count_type: total
+        shoot_again: 5s
+        enable_events: mode_base_starting
+        start_events: multiball_quick3_start 
+        stop_events: ball_ending
+        reset_events: machine_reset_phase_3, ball_starting
+    Shop_Multiball:
+        ball_count: 2
+        ball_locks: bd_scoop
+        ball_count_type: total
+        shoot_again: 5s
+        enable_events: mode_base_starting
+        start_events: multiball_lock_theshop_full
+        stop_events: ball_ending
+        reset_events: machine_reset_phase_3, ball_starting
+                      
+show_player:
+  mode_base_started:
+    GI_Orange_01:
+      speed: 1
+  balldevice_bd_plunger_ball_enter:
+    LaunchLightUp_01:
+      speed: 2
+      loops: 0
+      priority: 100
+    
+slide_player:
+    mode_base_started:
+      widgets:
+        - type: text
+          font_name: hachicro
+          text: (score)
+          number_grouping: true
+          min_digits: 2
+          font_size: 40
+        - type: text
+          text: PLAYER (number)
+          font_size: 40
+          anchor_x: left
+          anchor_y: bottom
+        - type: text
+          text: BALL (ball)
+          anchor_x: right
+          anchor_y: bottom
+          font_size: 40
+
+
+
+
+sequence_shots:
+    right_orbit:
+        switch_sequence: s_r_spinner, s_l_spinner
+        sequence_timeout: 2s
+    left_ramp:
+        switch_sequence: s_l_rampenter, s_l_rampexit
+        sequence_timeout: 2s
+    left_orbit:
+        switch_sequence: s_l_spinner, s_r_spinner
+        sequence_timeout: 2s
+                  
+          
+shots:
+    shot_left_ramp_enter:
+        switch: s_l_rampenter
+    shot_left_ramp_exit:
+        switch: s_l_rampexit
+    shot_r_spinner:
+        switch: s_r_spinner
+        show_tokens:
+            led: led_r_spinner
+        profile: profile_spinner
+    shot_l_spinner:
+        switch: s_l_spinner
+        show_tokens:
+            led: led_l_spinner
+        profile: profile_spinner
+    shot_l_outlane:
+        switch: s_l_outlane
+        show_tokens:
+            led: led_l_outlane
+        profile: profile_spinner
+    shot_l_inlane:
+        switch: s_l_inlane
+        show_tokens:
+            led: led_l_inlane
+        profile: profile_insert
+    shot_r_outlane:
+        switch: s_r_outlane
+        show_tokens:
+            led: led_r_outlane
+        profile: profile_insert
+    shot_r_inlane:
+        switch: s_r_inlane
+        show_tokens:
+            led: led_r_inlane
+        profile: profile_insert
+    shot_l_sling:
+        switch: s_l_sling
+        profile: profile_l_sling
+    shot_r_sling:
+        switch: s_r_sling
+        profile: profile_r_sling
+    shot_drop1:
+        switch: s_drop1
+        show_tokens:
+            led: led_drop1
+        profile: profile_spinner
+    shot_drop2:
+        switch: s_drop2
+        show_tokens:
+            led: led_drop2
+        profile: profile_insert
+    shot_drop3:
+        switch: s_drop3
+        show_tokens:
+            led: led_drop3
+        profile: profile_insert
+    shot_drop4:
+        switch: s_drop4
+        show_tokens:
+            led: led_drop4
+        profile: profile_insert
+    shot_centercaptive:
+        switch: s_centercaptive
+        profile: profile_insert
+        
+shot_profiles:  
+    profile_spinner:
+        states:
+            - name: unlit
+              priority: 500
+            - name: lit
+              show: on
+              priority: 500
+        loop: yes    
+    profile_insert:
+        states:
+            - name: unlit  
+              priority: 500
+            - name: lit  
+              show: on
+              priority: 500
+        loop: yes
+    profile_r_sling:
+        states:
+            - name: unlit
+              show: off
+            - name: hit
+              show: RightSlingHit_Inner_01
+              priority: 500
+              loops: 0
+        loop: true  
+    profile_l_sling:
+        states:
+            - name: unlit
+              show: off
+            - name: hit
+              show: RightSlingHit_Inner_01
+              priority: 500
+              loops: 0
+        loop: true  
+        
+
+shot_groups:
+    outlanes:
+        shots: shot_l_outlane, shot_l_inlane, shot_r_inlane, shot_r_outlane
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        reset_events: outlanes_lit_complete
+        enable_events: mode_base_started
+        disable_events: bonus_start
+    drops:
+        shots: shot_drop1, shot_drop2, shot_drop3, shot_drop4
+        reset_events: drops_lit_complete
+        enable_events: mode_base_started
+        disable_events: bonus_start         
+        
+variable_player:
+    mode_base_started:
+        modebasescore: 1
+        score: 0
+    outlanes_complete:
+        score: 25500
+    s_l_low_active:
+        score: 1
+    s_l_rampenter_active:
+       score: 10000
+    s_l_rampexit_active:
+       score: 1111
+    shot_l_spinner_profile_spinner_hit:
+        score: 50
+    shot_r_spinner_profile_spinner_hit:
+        score: 25
+    shot_l_orbit_default_hit:
+        score: 3000
+        orbits: 1
+    shot_r_orbit_default_hit:
+        score: 5000
+        orbits: 1
+    shot_picard_default_hit:
+        score: 666666
+    shot_l_spinner_profile_spinner_lit_hit:
+        score: 100
+    shot_leftRamp_default_hit:
+        score: 30000
+        ramps: 1
+    shot_r_ramp_default_hit:
+        score: 50000
+        ramps: 1
+    shot_centercaptive_profile_insert_unlit_hit:
+        score: 50000
+        ramps: 1
+    player_add_success:
+        score: 0
+    shot_r_inlane_profile_insert_unlit_hit:
+        score: 100
+    shot_r_inlane_profile_insert_lit_hit:
+        score: 1000
+    shot_l_inlane_profile_insert_unlit_hit:
+        score: 100
+    shot_l_inlane_profile_insert_lit_hit:
+        score: 1000
+    shot_r_outlane_profile_insert_unlit_hit:
+        score: 100
+    shot_r_outlane_profile_insert_lit_hit:
+        score: 1000
+    shot_l_outlane_profile_insert_unlit_hit:
+        score: 100
+    shot_l_outlane_profile_insert_lit_hit:
+        score: 1000
+
+ball_saves:
+  default:
+    active_time: 5s
+    hurry_up_time: 1s
+    grace_period: 1s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_bd_plunger_ball_eject_success
+    auto_launch: yes
+    balls_to_save: 1
+    debug: yes
+  quick2ballmulti:
+    active_time: 5s
+    hurry_up_time: 1s
+    grace_period: 1s
+    enable_events: multiball_lock_theshop_full
+    timer_start_events: balldevice_bd_plunger_ball_eject_success
+    auto_launch: yes
+    balls_to_save: 1
+    debug: yes

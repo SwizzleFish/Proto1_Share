@@ -1,0 +1,21 @@
+#config_version=5
+
+show_player:
+  mode_bonus_started:
+    FullRain:
+      speed: 2
+      priority: 10
+
+mode_settings:
+  keep_multiplier: True
+  hurry_up_event: flipper_cancel
+  bonus_entries:
+      - event: bonus_ramps
+        score: current_player.ramps * 5000
+        player_score_entry: ramps
+        reset_player_score_entry: True
+        skip_if_zero: false
+      - event: bonus_orbits
+        score: current_player.orbits *1000
+        player_score_entry: orbits
+        reset_player_score_entry: False

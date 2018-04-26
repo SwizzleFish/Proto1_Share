@@ -1,0 +1,252 @@
+#show_version=5
+
+#3DM RGB LED MPF AutoYAML: Sample from AE
+
+# Frame Number: 0
+- duration: 0.033
+  lights:
+    l_led21: "fff7e7"
+    l_led22: "fff7e7"
+    l_led23: "000000"
+    l_led24: "000000"
+    l_led25: "fff7e7"
+# Frame Number: 1
+- duration: 0.033
+  lights:
+    l_led21: "fff6e3"
+    l_led22: "fff7e7"
+    l_led23: "fff7e7"
+    l_led24: "fff7e7"
+    l_led25: "fff7e7"
+# Frame Number: 2
+- duration: 0.033
+  lights:
+    l_led21: "ffd867"
+    l_led22: "ffe7a4"
+    l_led23: "ffefc6"
+    l_led24: "ffebb7"
+    l_led25: "ffdf84"
+# Frame Number: 3
+- duration: 0.033
+  lights:
+    l_led21: "ffa000"
+    l_led22: "ffba17"
+    l_led23: "ffc837"
+    l_led24: "ffc226"
+    l_led25: "ffad05"
+# Frame Number: 4
+- duration: 0.033
+  lights:
+    l_led21: "ff4200"
+    l_led22: "ff6b00"
+    l_led23: "ff8400"
+    l_led24: "ff7900"
+    l_led25: "ff5500"
+# Frame Number: 5
+- duration: 0.033
+  lights:
+    l_led21: "ff000b"
+    l_led22: "ff0f00"
+    l_led23: "ff2400"
+    l_led24: "ff1a00"
+    l_led25: "ff0301"
+# Frame Number: 6
+- duration: 0.033
+  lights:
+    l_led21: "ff0095"
+    l_led22: "ff0055"
+    l_led23: "ff002f"
+    l_led24: "ff0041"
+    l_led25: "ff0078"
+# Frame Number: 7
+- duration: 0.033
+  lights:
+    l_led21: "ea03f1"
+    l_led22: "ff00dc"
+    l_led23: "ff00c0"
+    l_led24: "ff00cf"
+    l_led25: "f701ea"
+# Frame Number: 8
+- duration: 0.033
+  lights:
+    l_led21: "8513ff"
+    l_led22: "b50bfe"
+    l_led23: "d107f9"
+    l_led24: "c409fc"
+    l_led25: "9c0fff"
+# Frame Number: 9
+- duration: 0.033
+  lights:
+    l_led21: "0124fe"
+    l_led22: "2920ff"
+    l_led23: "5a19ff"
+    l_led24: "411dff"
+    l_led25: "0b23ff"
+# Frame Number: 10
+- duration: 0.033
+  lights:
+    l_led21: "0b1cec"
+    l_led22: "0021f6"
+    l_led23: "0023fb"
+    l_led24: "0022f9"
+    l_led25: "041ef1"
+# Frame Number: 11
+- duration: 0.033
+  lights:
+    l_led21: "300fd3"
+    l_led22: "1a17e2"
+    l_led23: "0d1beb"
+    l_led24: "1319e7"
+    l_led25: "2613db"
+# Frame Number: 12
+- duration: 0.033
+  lights:
+    l_led21: "4608c1"
+    l_led22: "330fd2"
+    l_led23: "2413dc"
+    l_led24: "2b11d7"
+    l_led25: "3e0bc9"
+# Frame Number: 13
+- duration: 0.033
+  lights:
+    l_led21: "5103b0"
+    l_led22: "4508c3"
+    l_led23: "380dce"
+    l_led24: "3e0bc9"
+    l_led25: "4d05b9"
+# Frame Number: 14
+- duration: 0.033
+  lights:
+    l_led21: "5301a3"
+    l_led22: "5004b4"
+    l_led23: "4707c0"
+    l_led24: "4c06ba"
+    l_led25: "5302aa"
+# Frame Number: 15
+- duration: 0.033
+  lights:
+    l_led21: "510099"
+    l_led22: "5301a6"
+    l_led23: "5103b2"
+    l_led24: "5202ac"
+    l_led25: "52009f"
+# Frame Number: 16
+- duration: 0.033
+  lights:
+    l_led21: "4e008f"
+    l_led22: "52009d"
+    l_led23: "5301a5"
+    l_led24: "5301a1"
+    l_led25: "500096"
+# Frame Number: 17
+- duration: 0.033
+  lights:
+    l_led21: "4a0085"
+    l_led22: "500094"
+    l_led23: "52009c"
+    l_led24: "510098"
+    l_led25: "4d008c"
+# Frame Number: 18
+- duration: 0.033
+  lights:
+    l_led21: "46007a"
+    l_led22: "4c008a"
+    l_led23: "500093"
+    l_led24: "4e008f"
+    l_led25: "490081"
+# Frame Number: 19
+- duration: 0.033
+  lights:
+    l_led21: "41006f"
+    l_led22: "48007f"
+    l_led23: "4c008a"
+    l_led24: "4b0085"
+    l_led25: "440077"
+# Frame Number: 20
+- duration: 0.033
+  lights:
+    l_led21: "3b0064"
+    l_led22: "440075"
+    l_led23: "480080"
+    l_led24: "46007a"
+    l_led25: "3f006c"
+# Frame Number: 21
+- duration: 0.033
+  lights:
+    l_led21: "350059"
+    l_led22: "3e006a"
+    l_led23: "440075"
+    l_led24: "410070"
+    l_led25: "390061"
+# Frame Number: 22
+- duration: 0.033
+  lights:
+    l_led21: "2e004d"
+    l_led22: "39005f"
+    l_led23: "3e006b"
+    l_led24: "3c0065"
+    l_led25: "330056"
+# Frame Number: 23
+- duration: 0.033
+  lights:
+    l_led21: "23003a"
+    l_led22: "330055"
+    l_led23: "390060"
+    l_led24: "36005b"
+    l_led25: "2c0049"
+# Frame Number: 24
+- duration: 0.033
+  lights:
+    l_led21: "180028"
+    l_led22: "2b0047"
+    l_led23: "330056"
+    l_led24: "300050"
+    l_led25: "200036"
+# Frame Number: 25
+- duration: 0.033
+  lights:
+    l_led21: "0d0017"
+    l_led22: "1f0034"
+    l_led23: "2b0048"
+    l_led24: "26003e"
+    l_led25: "150024"
+# Frame Number: 26
+- duration: 0.033
+  lights:
+    l_led21: "05000a"
+    l_led22: "140022"
+    l_led23: "200035"
+    l_led24: "1a002c"
+    l_led25: "0c0014"
+# Frame Number: 27
+- duration: 0.033
+  lights:
+    l_led21: "010001"
+    l_led22: "0b0012"
+    l_led23: "150023"
+    l_led24: "10001b"
+    l_led25: "040007"
+# Frame Number: 28
+- duration: 0.033
+  lights:
+    l_led21: "000000"
+    l_led22: "030006"
+    l_led23: "0b0013"
+    l_led24: "07000c"
+    l_led25: "000000"
+# Frame Number: 29
+- duration: 0.033
+  lights:
+    l_led21: "000000"
+    l_led22: "000000"
+    l_led23: "030006"
+    l_led24: "010002"
+    l_led25: "000000"
+# Frame Number: 30
+- duration: 0.033
+  lights:
+    l_led21: "000000"
+    l_led22: "000000"
+    l_led23: "000000"
+    l_led24: "000000"
+    l_led25: "000000"

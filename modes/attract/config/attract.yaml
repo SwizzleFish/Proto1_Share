@@ -1,0 +1,22 @@
+#config_version=5
+
+
+
+show_player:
+  mode_attract_started: RainSwipe
+      
+slide_player:
+    mode_attract_started: select_30flips
+    
+slides:
+  select_30flips:
+    widgets:
+      - type: text
+        text: Proto1
+        font_size: 64
+        color: purple
+        y: 600
+            
+    transition:
+      type: move_in
+      direction: right

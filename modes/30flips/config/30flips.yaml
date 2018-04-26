@@ -1,0 +1,49 @@
+#config_version=5
+mode:
+    start_events: intro_30flips_selected
+    stop_events: ball_ending
+
+
+counters:
+     30flips_counter:
+         count_events: sw_left_flipper_active, sw_right_flipper_active, sw_flipper_left_b_active, sw_flipper_right_b_active
+         starting_count: 300
+         direction: down
+         count_complete_value: 0
+         persist_state: False
+         events_when_hit: remove_1_flip
+         events_when_complete: 30flips_complete
+          
+show_player:
+  mode_30flips_started:
+    GI_Blue_01:
+      speed: 1
+      priority: 10
+
+
+slide_player:
+    mode_30flips_started:
+      widgets:
+        - type: text
+          font_name: hachicro
+          text: (flips)
+          number_grouping: true
+          min_digits: 2
+          font_size: 44
+
+      
+scoring:
+  mode_30flips_started{current_player.flips<=0}:
+    flips: 30
+  add_10_flips:
+    flips: 10
+  remove_1_flip:
+    flips: -1
+  s_r_captive_01_active:
+    flips: 1
+  s_r_captive_02_active:
+    flips: 2
+    
+event_player:
+    player_flips{current_player.flips==0}: 30flips_complete
+     
