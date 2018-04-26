@@ -46,17 +46,17 @@ slide_player:
           text: (score)
           number_grouping: true
           min_digits: 2
-          font_size: 40
+          font_size: 30
         - type: text
           text: PLAYER (number)
-          font_size: 40
+          font_size: 25
           anchor_x: left
           anchor_y: bottom
         - type: text
           text: BALL (ball)
           anchor_x: right
           anchor_y: bottom
-          font_size: 40
+          font_size: 25
 
 
 
