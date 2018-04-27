@@ -32,9 +32,9 @@ show_player:
   mode_base_started:
     GI_Orange_01:
       speed: 1
-  balldevice_bd_plunger_ball_enter:
+  balldevice_bd_plunger_ball_eject_attempt:
     LaunchLightUp_01:
-      speed: 3
+      speed: 2
       loops: 0
       priority: 100
     
@@ -62,6 +62,9 @@ slide_player:
 
 
 sequence_shots:
+    right_orbit:
+        switch_sequence: s_r_spinner, s_l_spinner
+        sequence_timeout: 2s
     left_ramp:
         switch_sequence: s_l_rampenter, s_l_rampexit
         sequence_timeout: 2s
@@ -71,6 +74,8 @@ sequence_shots:
                   
           
 shots:
+    shot_captive_left:
+        switch: s_l_captive
     shot_left_ramp_enter:
         switch: s_l_rampenter
     shot_left_ramp_exit:
@@ -89,7 +94,7 @@ shots:
         switch: s_l_outlane
         show_tokens:
             led: led_l_outlane
-        profile: profile_insert
+        profile: profile_spinner
     shot_l_inlane:
         switch: s_l_inlane
         show_tokens:
@@ -187,6 +192,15 @@ shot_groups:
         disable_events: bonus_start         
         
 variable_player:
+    shot_l_sling_hit:
+        slings: 1
+    shot_r_sling_hit:
+        slings: 1
+    drops_hit:
+        drops: 1
+    left_ramp_hit:
+        score: 10000
+        ramps: 1
     mode_base_started:
         modebasescore: 1
         score: 0
@@ -200,8 +214,10 @@ variable_player:
        score: 1111
     shot_l_spinner_profile_spinner_hit:
         score: 50
+        spinners: 1
     shot_r_spinner_profile_spinner_hit:
         score: 25
+        spinners: 1
     shot_l_orbit_default_hit:
         score: 3000
         orbits: 1
@@ -220,7 +236,7 @@ variable_player:
         ramps: 1
     shot_centercaptive_profile_insert_unlit_hit:
         score: 50000
-        ramps: 1
+        captives: 1
     player_add_success:
         score: 0
     shot_r_inlane_profile_insert_unlit_hit:
