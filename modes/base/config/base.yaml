@@ -139,6 +139,16 @@ shots:
     shot_centercaptive:
         switch: s_centercaptive
         profile: profile_insert
+
+shows:
+   flash_red:
+      - time: 0
+        lights:
+          (led): red
+      - time: +1
+        lights:
+          (led): off
+      - time: +1        
         
 shot_profiles:  
     profile_spinner:
