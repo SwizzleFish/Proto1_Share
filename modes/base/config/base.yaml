@@ -104,8 +104,26 @@ sequence_shots:
                   
           
 shots:
+    shot_l_outlane:
+        switch: s_l_outlane
+        show_tokens:
+            led: led_l_outlane
+        profile: profile_spinner        
+    shot_l_inlane:
+        switch: s_l_inlane
+        show_tokens:
+            led: led_l_inlane
+        profile: profile_insert       
+    shot_l_sling:
+        switch: s_l_sling
+        profile: profile_l_sling
     shot_captive_left:
         switch: s_l_captive
+    shot_l_spinner:
+        switch: s_l_spinner
+        show_tokens:
+            led: led_l_spinner
+        profile: profile_spinner
     shot_left_ramp_enter:
         switch: s_l_rampenter
     shot_left_ramp_exit:
@@ -115,21 +133,6 @@ shots:
         show_tokens:
             led: led_r_spinner
         profile: profile_spinner
-    shot_l_spinner:
-        switch: s_l_spinner
-        show_tokens:
-            led: led_l_spinner
-        profile: profile_spinner
-    shot_l_outlane:
-        switch: s_l_outlane
-        show_tokens:
-            led: led_l_outlane
-        profile: profile_spinner
-    shot_l_inlane:
-        switch: s_l_inlane
-        show_tokens:
-            led: led_l_inlane
-        profile: profile_insert
     shot_r_outlane:
         switch: s_r_outlane
         show_tokens:
@@ -140,9 +143,6 @@ shots:
         show_tokens:
             led: led_r_inlane
         profile: profile_insert
-    shot_l_sling:
-        switch: s_l_sling
-        profile: profile_l_sling
     shot_r_sling:
         switch: s_r_sling
         profile: profile_r_sling
@@ -232,12 +232,21 @@ shot_groups:
         disable_events: bonus_start         
         
 variable_player:
+    shot_l_outlane_hit:
+        lanes: 1
+        score: 100
+    shot_l_inlane_hit:
+        lanes: 1
+        score: 300
     shot_l_sling_hit:
         slings: 1
-    shot_r_sling_hit:
-        slings: 1
-    drops_hit:
-        drops: 1
+        score: 500
+    shot_captive_left_hit:
+        captives: 1
+        score: 1000
+    shot_l_spinner_hit:
+        score: 50
+        spinners: 1
     left_ramp_hit:
         score: 10000
         ramps: 1
@@ -252,9 +261,10 @@ variable_player:
        score: 10000
     s_l_rampexit_active:
        score: 1111
-    shot_l_spinner_profile_spinner_hit:
-        score: 50
-        spinners: 1
+    shot_r_sling_hit:
+        slings: 1
+    drops_hit:
+        drops: 1
     shot_r_spinner_profile_spinner_hit:
         score: 25
         spinners: 1
@@ -265,17 +275,15 @@ variable_player:
         score: 5000
         orbits: 1
     shot_picard_default_hit:
-        score: 666666
-    shot_l_spinner_profile_spinner_lit_hit:
-        score: 100
+        score: 66666
     shot_leftRamp_default_hit:
-        score: 30000
+        score: 3000
         ramps: 1
     shot_r_ramp_default_hit:
-        score: 50000
+        score: 5000
         ramps: 1
     shot_centercaptive_profile_insert_unlit_hit:
-        score: 50000
+        score: 5000
         captives: 1
     player_add_success:
         score: 0
