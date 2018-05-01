@@ -1,0 +1,20 @@
+#config_version=5
+mode:
+  start_events: supercaptive_start
+  stop_events: timer_super_captive_timer_complete
+  priority: 200
+
+  
+
+timers:
+    super_captive_timer:
+        start_value: 30
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+  
+variable_player:
+    shot_centercaptive_hit:
+        score: 3000
+        captives: 4

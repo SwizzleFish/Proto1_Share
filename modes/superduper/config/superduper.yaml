@@ -1,0 +1,20 @@
+#config_version=5
+mode:
+  start_events: superduper_start
+  stop_events: timer_super_duper_timer_complete
+  priority: 200
+
+  
+
+timers:
+    super_duper_timer:
+        start_value: 30
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+  
+variable_player:
+    drops_hit:
+        score: 500
+        drops: 4

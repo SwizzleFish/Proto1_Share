@@ -1,0 +1,23 @@
+#config_version=5
+mode:
+  start_events: superspinner_start
+  stop_events: timer_super_spinner_timer_complete
+  priority: 200
+
+  
+
+timers:
+    super_spinner_timer:
+        start_value: 30
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+  
+variable_player:
+    shot_l_spinner_profile_spinner_hit:
+        score: 500
+        spinners: 4
+    shot_r_spinner_profile_spinner_hit:
+        score: 500
+        spinners: 4

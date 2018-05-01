@@ -37,6 +37,11 @@ show_player:
       speed: 2
       loops: 0
       priority: 100
+  shot_r_sling_hit:
+    RightSling_Hit01:
+      speed: 1
+    
+        
     
 slide_player:
     mode_base_started:
@@ -58,7 +63,32 @@ slide_player:
           anchor_y: bottom
           font_size: 25
 
-
+counters:
+    superspinner_activate:
+        count_events: shot_l_spinner_hit, shot_r_spinner_hit
+        starting_count: 0
+        count_complete_value: 30
+        events_when_complete: superspinner_start
+    superdrop_activate:
+        count_events: drops_hit
+        starting_count: 0
+        count_complete_value: 8
+        events_when_complete: superdrop_start
+    superramp_activate:
+        count_events: left_ramp_hit
+        starting_count: 0
+        count_complete_value: 8
+        events_when_complete: superramp_start    
+    supersling_activate:
+        count_events: player_slings
+        starting_count: 0
+        count_complete_value: 20
+        events_when_complete: supersling_start            
+    superduper_activate:
+        count_events: superspinner_start, superdrop_start, superramp_start, supersling_start
+        starting_count: 0
+        count_complete_value: 4
+        events_when_complete: superduper_start               
 
 
 sequence_shots:

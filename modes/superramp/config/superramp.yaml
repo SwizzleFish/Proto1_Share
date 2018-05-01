@@ -1,0 +1,23 @@
+#config_version=5
+mode:
+  start_events: superramp_start
+  stop_events: timer_super_ramp_timer_complete
+  priority: 200
+
+  
+
+timers:
+    super_ramp_timer:
+        start_value: 30
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+  
+variable_player:
+    shot_leftRamp_default_hit:
+        score: 6000
+        ramps: 1
+    shot_r_ramp_default_hit:
+        score: 10000
+        ramps: 1
