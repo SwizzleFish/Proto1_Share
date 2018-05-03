@@ -37,9 +37,7 @@ show_player:
       speed: 2
       loops: 0
       priority: 100
-  shot_r_sling_hit:
-    RightSling_Hit01:
-      speed: 1
+
     
         
     
@@ -108,12 +106,12 @@ shots:
         switch: s_l_outlane
         show_tokens:
             led: led_l_outlane
-        profile: profile_spinner        
+        profile: profile_flash        
     shot_l_inlane:
         switch: s_l_inlane
         show_tokens:
             led: led_l_inlane
-        profile: profile_insert       
+        profile: profile_flash       
     shot_l_sling:
         switch: s_l_sling
         profile: profile_l_sling
@@ -137,15 +135,15 @@ shots:
         switch: s_r_outlane
         show_tokens:
             led: led_r_outlane
-        profile: profile_insert
+        profile: profile_flash
     shot_r_inlane:
         switch: s_r_inlane
         show_tokens:
             led: led_r_inlane
-        profile: profile_insert
+        profile: profile_flash
     shot_r_sling:
         switch: s_r_sling
-        profile: profile_r_sling
+        profile: profile_slingbuildup
     shot_drop1:
         switch: s_drop1
         show_tokens:
@@ -183,9 +181,57 @@ shows:
       - time: +1
         lights:
           (led): off
-      - time: +1        
+      - time: +1
+   flash_rainbow:
+      - time: 0
+        lights:
+          (led): red
+      - time: +1
+        lights:
+          (led): orange
+      - time: +1 
+        lights:
+          (led): yellow
+      - time: +1
+        lights:
+          (led): green
+      - time: +1
+   sling_buildup_01:
+      - time: 0
+        lights:
+          led_l_sling_low: red
+      - time: +1
+        lights:
+          led_l_sling_low: orange
+      - time: +1 
+        lights:
+          led_l_sling_low: yellow
+      - time: +1
         
-shot_profiles:  
+        
+shot_profiles:
+    profile_slingbuildup:
+        states:
+            - name: unlit
+              priority: 500
+            - name: slingstep1
+              show: sling_buildup_01
+              speed: 1
+              priority: 500
+            - name: lit
+              show: on
+              priority: 500   
+    profile_flash:
+        states:
+            - name: unlit
+              priority: 500
+            - name: flash
+              show: flash_rainbow
+              speed: 4
+              priority: 500
+            - name: lit
+              show: on
+              priority: 500          
     profile_spinner:
         states:
             - name: unlit
@@ -202,15 +248,7 @@ shot_profiles:
               show: on
               priority: 500
         loop: yes
-    profile_r_sling:
-        states:
-            - name: unlit
-              show: off
-            - name: hit
-              show: RightSlingHit_Inner_01
-              priority: 500
-              loops: 0
-        loop: true  
+
     profile_l_sling:
         states:
             - name: unlit

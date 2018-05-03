@@ -1,6 +1,6 @@
 events:
   game_ended: 562
-  game_started: 1286
+  game_started: 1306
 player:
   score:
     average: 150887.24570446747
@@ -24,7 +24,7 @@ shots:
   shot_drop3: 505
   shot_drop4: 447
   shot_l_captive: 99
-  shot_l_inlane: 1017
+  shot_l_inlane: 1018
   shot_l_low: 71
   shot_l_orbit: 402
   shot_l_outlane: 194
@@ -32,18 +32,19 @@ shots:
   shot_l_rampentry_l: 246
   shot_l_rampentry_r: 253
   shot_l_sling: 2738
-  shot_l_spinner: 12532
-  shot_left_ramp_enter: 68
+  shot_l_spinner: 12533
+  shot_left_ramp_enter: 74
   shot_left_ramp_exit: 50
   shot_leftramp: 66
   shot_outlane: 157
   shot_picard: 5
-  shot_r_inlane: 931
+  shot_r_inlane: 932
   shot_r_orbit: 367
   shot_r_outlane: 293
   shot_r_ramp: 36
-  shot_r_sling: 2379
+  shot_r_sling: 2402
   shot_r_spinner: 8471
+  shot_ring: 4
   shot_ring1: 359
   shot_ring2: 225
   shot_ring3: 177
@@ -67,7 +68,7 @@ switches:
   s_drop3: 974
   s_drop4: 6571
   s_dropcenter: 2000
-  s_flipper_left: 24300
+  s_flipper_left: 24307
   s_flipper_left_b: 3462
   s_flipper_right: 26713
   s_flipper_right_b: 1424
@@ -75,29 +76,29 @@ switches:
   s_l_02: 681
   s_l_03: 29
   s_l_captive: 295
-  s_l_inlane: 1637
+  s_l_inlane: 1638
   s_l_low: 458
   s_l_lowerside: 29
   s_l_outlane: 296
   s_l_ramp_enter: 79
   s_l_ramp_exit: 3247
-  s_l_rampenter: 565
+  s_l_rampenter: 571
   s_l_rampentry: 149
-  s_l_rampentry_L: 26
-  s_l_rampentry_R: 22
+  s_l_rampentry_L: 29
+  s_l_rampentry_R: 23
   s_l_rampentry_l: 1221
   s_l_rampentry_r: 1312
   s_l_rampexit: 445
   s_l_sling: 4129
-  s_l_spinner: 18100
-  s_launch: 3193
-  s_plunger_lane: 3534
+  s_l_spinner: 18101
+  s_launch: 3201
+  s_plunger_lane: 3538
   s_r_19: 56
   s_r_22: 7
   s_r_behindflip: 535
   s_r_captive_01: 1027
   s_r_captive_02: 926
-  s_r_inlane: 1805
+  s_r_inlane: 1806
   s_r_outlane: 710
   s_r_ramp: 239
   s_r_ramp2entry: 227
@@ -106,10 +107,10 @@ switches:
   s_r_ramp_exit: 26
   s_r_rampentry: 164
   s_r_ring1: 1433
-  s_r_ring2: 819
+  s_r_ring2: 823
   s_r_ring3: 362
   s_r_ring4: 293
-  s_r_sling: 4226
+  s_r_sling: 4249
   s_r_spinner: 13295
   s_ring_1: 0
   s_ring_2: 0
@@ -128,6 +129,6 @@ switches:
   s_start: 377
   s_trough_1: 4061
   s_trough_2: 2974
-  s_trough_3: 3177
+  s_trough_3: 3179
   s_trough_4: 379
   s_trough_jam: 2788

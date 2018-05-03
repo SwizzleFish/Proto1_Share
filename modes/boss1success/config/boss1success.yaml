@@ -1,0 +1,12 @@
+#config_version=5
+mode:
+  start_events: boss1_success
+  stop_events: timer_boss1_timeout_timer_complete
+  priority: 200
+
+  
+  
+variable_player:
+    shot_ring_hit:
+        score: 5000
+        boss1hits: 2

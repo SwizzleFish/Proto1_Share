@@ -18,6 +18,8 @@ modes:
    - base
    - bonus
    - boss1
+   - boss1failure
+   - boss1success
    - access
    - 30flips
    - high_score

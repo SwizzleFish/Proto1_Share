@@ -15,6 +15,6 @@ timers:
         start_running: true  
   
 variable_player:
-    drops_hit:
-        score: 500
+    shot_ring_hit:
+        score: 5000
         boss1hits: 2
