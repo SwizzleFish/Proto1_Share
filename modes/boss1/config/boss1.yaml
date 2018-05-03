@@ -1,0 +1,20 @@
+#config_version=5
+mode:
+  start_events: boss1_start, ball_save_intro_disabled
+  stop_events: timer_boss1_timeout_timer_complete
+  priority: 200
+
+  
+
+timers:
+    boss1_timeout_timer:
+        start_value: 60
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+  
+variable_player:
+    drops_hit:
+        score: 500
+        boss1hits: 2

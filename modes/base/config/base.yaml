@@ -169,6 +169,11 @@ shots:
     shot_centercaptive:
         switch: s_centercaptive
         profile: profile_insert
+    shot_ring:
+        switch: s_r_ring1, s_r_ring2, s_r_ring3
+        show_tokens:
+            led: led_upperring
+        profile: profile_ring
 
 shows:
    flash_red:
@@ -215,7 +220,15 @@ shot_profiles:
               priority: 500
               loops: 0
         loop: true  
-        
+    profile_ring:
+        states:
+            - name: unlit
+              show: off
+              priority: 500
+            - name: hit
+              show: on
+              priority: 500
+        loop: true          
 
 shot_groups:
     outlanes:
@@ -305,8 +318,8 @@ variable_player:
         score: 1000
 
 ball_saves:
-  default:
-    active_time: 5s
+  intro:
+    active_time: 30s
     hurry_up_time: 1s
     grace_period: 1s
     enable_events: mode_base_started

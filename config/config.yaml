@@ -17,6 +17,7 @@ modes:
    - attract
    - base
    - bonus
+   - boss1
    - access
    - 30flips
    - high_score

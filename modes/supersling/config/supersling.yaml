@@ -4,6 +4,20 @@ mode:
   stop_events: timer_super_sling_timer_complete
   priority: 200
 
+slide_player:
+    mode_supersling_started:
+      superslingslide:
+        - type: text
+          font_name: hachicro
+          text: Slings (slings)
+          number_grouping: true
+          min_digits: 2
+          font_size: 10
+        - type: text
+          text: SUPERSLINGS
+          font_size: 25
+          anchor_x: left
+          anchor_y: bottom
   
 
 timers:
