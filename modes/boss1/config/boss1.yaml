@@ -17,4 +17,9 @@ timers:
 variable_player:
     shot_ring_hit:
         score: 5000
-        boss1hits: 2
+        boss1hits: 1
+        
+        
+event_player:
+   shot_ring_hit{current_player.boss1hits > 10}: boss1_success
+   #mode_modeselect_started{current_player.score < 10}: mode_intro_start

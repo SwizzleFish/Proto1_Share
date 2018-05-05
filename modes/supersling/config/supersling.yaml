@@ -4,20 +4,31 @@ mode:
   stop_events: timer_super_sling_timer_complete
   priority: 200
 
-slide_player:
-    mode_supersling_started:
+widgets:
       superslingslide:
         - type: text
           font_name: hachicro
           text: Slings (slings)
           number_grouping: true
           min_digits: 2
-          font_size: 10
+          font_size: 16
+          x: left
+          y: top-30
+          anchor_x: left
+          anchor_y: top
         - type: text
           text: SUPERSLINGS
-          font_size: 25
+          x: left
+          y: top
+          font_size: 18
           anchor_x: left
-          anchor_y: bottom
+          anchor_y: top
+  
+widget_player:
+    mode_supersling_started:
+      superslingslide:
+        slide: main_scoring_slide
+
   
 
 timers:
@@ -31,7 +42,7 @@ timers:
 variable_player:
     shot_l_sling_hit:
         score: 300
-        slings: 1
+        slings: 2
     shot_r_sling_hit:
         score: 400
-        slings: 1
+        slings: 2

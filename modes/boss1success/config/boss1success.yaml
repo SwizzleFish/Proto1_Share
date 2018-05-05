@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: boss1_success
-  stop_events: timer_boss1_timeout_timer_complete
+  stop_events: 
   priority: 200
 
   

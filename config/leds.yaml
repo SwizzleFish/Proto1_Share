@@ -96,12 +96,12 @@ lights:
         type: grb
     l_led21:
         number: 21
-        tags: led_all, led_r_sling, led_r_sling_top
+        tags: led_all, led_r_sling, led_r_sling_low
         type: grb
     l_led22:
         type: grb
         number: 22
-        tags: led_all, led_r_sling, led_r_sling_topmid
+        tags: led_all, led_r_sling, led_r_sling_lowmid
     l_led23:
         type: grb
         number: 23
@@ -109,7 +109,7 @@ lights:
     l_led24:
         type: grb
         number: 24
-        tags: led_all, led_r_sling, led_r_sling_low
+        tags: led_all, led_r_sling, led_r_sling_topmid
     l_led25:
         type: grb
         number: 25

@@ -29,38 +29,54 @@ multiballs:
         reset_events: machine_reset_phase_3, ball_starting
                       
 show_player:
-  mode_base_started:
-    GI_Orange_01:
+  balldevice_bd_plunger_ball_eject_success:
+    gi_light_01:
       speed: 1
-  balldevice_bd_plunger_ball_eject_attempt:
+      priority: 200
+  s_launch_active:
     LaunchLightUp_01:
-      speed: 2
+      speed: .5
       loops: 0
       priority: 100
-
-    
+  mode_base_started:
+    gi_orange_01:
+      speed: 1
+  ball_save_intro_enabled:
+    flash_red_save:
+        speed: 1
+  ball_save_intro_disabled:
+    flash_red_save_off:
+        speed: 1
+        priority: 300
         
     
 slide_player:
     mode_base_started:
-      widgets:
+      main_scoring_slide:
         - type: text
           font_name: hachicro
           text: (score)
           number_grouping: true
           min_digits: 2
-          font_size: 30
+          font_size: 50
         - type: text
           text: PLAYER (number)
           font_size: 25
+          x: 0
+          y: 0
           anchor_x: left
           anchor_y: bottom
         - type: text
           text: BALL (ball)
+          x: right
+          y: bottom
           anchor_x: right
           anchor_y: bottom
           font_size: 25
 
+
+
+          
 counters:
     superspinner_activate:
         count_events: shot_l_spinner_hit, shot_r_spinner_hit
@@ -182,6 +198,18 @@ shows:
         lights:
           (led): off
       - time: +1
+   flash_red_save:
+      - time: 0
+        lights:
+          led_betweenflips: red
+      - time: +1
+        lights:
+          led_betweenflips: off
+      - time: +1
+   flash_red_save_off:
+      - time: 0
+        lights:
+          led_betweenflips: off
    flash_rainbow:
       - time: 0
         lights:
@@ -196,31 +224,89 @@ shows:
         lights:
           (led): green
       - time: +1
-   sling_buildup_01:
+   sling_r_buildup_01:
       - time: 0
         lights:
-          led_l_sling_low: red
+          led_r_sling_low: red
       - time: +1
         lights:
-          led_l_sling_low: orange
+          led_r_sling_low: orange
       - time: +1 
         lights:
-          led_l_sling_low: yellow
+          led_r_sling_low: yellow
       - time: +1
-        
+   sling_r_buildup_02:
+      - time: 0
+        lights:
+          led_r_sling_low, led_r_sling_lowmid: red
+      - time: +1
+        lights:
+          led_r_sling_low, led_r_sling_lowmid: orange
+      - time: +1 
+        lights:
+          led_r_sling_low, led_r_sling_lowmid: yellow
+      - time: +1
+   sling_r_buildup_03:
+      - time: 0
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid: red
+      - time: +1
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid: blue
+      - time: +1 
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid: purple
+      - time: +1
+   sling_r_buildup_04:
+      - time: 0
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid, led_r_sling_topmid: red
+      - time: +1
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid, led_r_sling_topmid: blue
+      - time: +1 
+        lights:
+          led_r_sling_low, led_r_sling_lowmid, led_r_sling_mid, led_r_sling_topmid: pink
+      - time: +1         
+   sling_r_buildup_05:
+      - time: 0
+        lights:
+          led_r_sling: purple
+      - time: +1
+        lights:
+          led_r_sling: cyan
+      - time: +1 
+        lights:
+          led_r_sling: blue
+      - time: +1           
         
 shot_profiles:
     profile_slingbuildup:
         states:
             - name: unlit
+              show: off
               priority: 500
             - name: slingstep1
-              show: sling_buildup_01
+              show: sling_r_buildup_01
               speed: 1
               priority: 500
-            - name: lit
-              show: on
-              priority: 500   
+            - name: slingstep2
+              show: sling_r_buildup_02
+              speed: 2
+              priority: 500
+            - name: slingstep3
+              show: sling_r_buildup_03
+              speed: 3
+              priority: 500
+            - name: slingstep4
+              show: sling_r_buildup_04
+              speed: 4
+              priority: 500
+            - name: slingstep5
+              show: sling_r_buildup_05
+              speed: 6
+              priority: 500
+        loop: yes
     profile_flash:
         states:
             - name: unlit

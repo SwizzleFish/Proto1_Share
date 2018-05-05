@@ -4,7 +4,30 @@ mode:
   stop_events: timer_super_spinner_timer_complete
   priority: 200
 
+widgets:
+      superspinnerslide:
+        - type: text
+          font_name: hachicro
+          text: Spins (spinners)
+          number_grouping: true
+          min_digits: 2
+          font_size: 16
+          x: left
+          y: top-60
+          anchor_x: left
+          anchor_y: top
+        - type: text
+          text: SUPERSPINNERS
+          x: left
+          y: top-40
+          font_size: 18
+          anchor_x: left
+          anchor_y: top
   
+widget_player:
+    mode_superspinner_started:
+      superspinnerslide:
+        slide: main_scoring_slide  
 
 timers:
     super_spinner_timer:
@@ -16,8 +39,8 @@ timers:
   
 variable_player:
     shot_l_spinner_profile_spinner_hit:
-        score: 500
-        spinners: 4
+        score: 5000
+        spinners: 2
     shot_r_spinner_profile_spinner_hit:
-        score: 500
-        spinners: 4
+        score: 5000
+        spinners: 2
