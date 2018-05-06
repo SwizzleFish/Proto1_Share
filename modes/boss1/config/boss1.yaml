@@ -1,10 +1,32 @@
 #config_version=5
 mode:
   start_events: boss1_start, ball_save_intro_disabled
-  stop_events: timer_boss1_timeout_timer_complete
+  stop_events: timer_boss1_timeout_timer_complete, boss1_success
   priority: 200
 
+widgets:
+      bossfight:
+        - type: text
+          text: BossHits (boss1hits)
+          number_grouping: true
+          min_digits: 2
+          font_size: 16
+          x: middle
+          y: top-30
+          anchor_x: left
+          anchor_y: top
+        - type: text
+          text: BOSSBATTLE
+          x: middle
+          y: top
+          font_size: 18
+          anchor_x: middle
+          anchor_y: top
   
+widget_player:
+    mode_boss1_started:
+      bossfight:
+        slide: main_scoring_slide  
 
 timers:
     boss1_timeout_timer:
@@ -21,5 +43,4 @@ variable_player:
         
         
 event_player:
-   shot_ring_hit{current_player.boss1hits > 10}: boss1_success
-   #mode_modeselect_started{current_player.score < 10}: mode_intro_start
+   shot_ring_hit{current_player.boss1hits >= 10}: boss1_success

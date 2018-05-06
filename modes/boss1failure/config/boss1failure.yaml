@@ -1,12 +1,18 @@
 #config_version=5
 mode:
   start_events: timer_boss1_timeout_timer_complete
-  stop_events: 
+  stop_events: timer_boss1_failure_timer_complete
   priority: 200
 
-
+timers:
+    boss1_failure_timer:
+        start_value: 10
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true  
+    
   
 variable_player:
     shot_ring_hit:
         score: 5000
-        boss1hits: 2

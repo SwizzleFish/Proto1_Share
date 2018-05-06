@@ -1,0 +1,91 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  restart_on_next_ball: true
+  stop_events: 
+    award_rampskillshot
+    award_dropskillshot
+    award_captiveskillshot
+    
+  priority: 500
+
+widgets:
+      skillshotslide:
+        - type: text
+          text: SKILLSHOT
+          x: middle
+          y: top-40
+          font_size: 18
+          anchor_x: middle
+          anchor_y: top
+  
+widget_player:
+    single_player_ball_started:
+      skillshotslide:
+        slide: main_scoring_slide  
+
+shots:
+    skillshot_ramp:
+        switch: s_r_ramp
+        show_tokens:
+            led: led_r_ramp_entry
+        profile: profile_flash       
+    skillshot_captivestack:
+        switch: s_r_ramp
+        show_tokens:
+            led: led_r_ramp_entry
+        profile: profile_flash    
+    skillshot_drop:
+        switch: s_r_ramp
+        show_tokens:
+            led: led_r_ramp_entry
+        profile: profile_flash           
+
+achievements:
+    skill_ramp:
+        show_tokens:
+            led: led_r_ramp_entry
+        show_when_enabled: off
+        show_when_selected: flash_rainbow
+        show_when_completed: off
+        complete_events: s_r_ramp_active
+        events_when_completed: award_rampskillshot
+        reset_events: playfield_active
+
+    skill_captive:
+        show_tokens:
+            led: led_r_captive
+        show_when_enabled: off
+        show_when_selected: flash_rainbow
+        show_when_completed: off
+        complete_events: s_r_captive_01_active
+        events_when_completed: award_captiveskillshot 
+        reset_events: playfield_active
+      
+    skill_drop:
+        show_tokens:
+            led: led_drops
+        show_when_enabled: off
+        show_when_selected: flash_rainbow
+        show_when_completed: off
+        complete_events: player_drops
+        events_when_completed: award_dropskillshot
+        reset_events: playfield_active
+
+achievement_groups:
+    skillshot:
+        achievements:
+            skill_ramp
+            skill_captive
+            skill_drop
+        auto_select: yes
+        select_random_achievement_events: mode_skill_shot_starting
+        enable_events: ball_starting
+        
+variable_player:
+    award_captiveskillshot:
+        score: 50000
+    award_dropskillshot:
+        score: 50000
+    award_rampskillshot:
+        score: 50000

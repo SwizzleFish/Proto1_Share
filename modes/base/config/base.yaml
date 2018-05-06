@@ -48,7 +48,10 @@ show_player:
     flash_red_save_off:
         speed: 1
         priority: 300
-        
+  s_r_sling_active:
+   RightSlingHit_Inner_01:
+       priority: 550
+       loops: 0
     
 slide_player:
     mode_base_started:
@@ -142,6 +145,8 @@ shots:
         switch: s_l_rampenter
     shot_left_ramp_exit:
         switch: s_l_rampexit
+    shot_right_ramp:
+        switch: s_r_ramp
     shot_r_spinner:
         switch: s_r_spinner
         show_tokens:

@@ -125,19 +125,19 @@ lights:
     l_led28:
         type: grb
         number: 28
-        tags: led_all, led_drop1
+        tags: led_all, led_drop1, led_drops
     l_led29:
         type: grb
         number: 29
-        tags: led_all, led_drop2
+        tags: led_all, led_drop2, led_drops
     l_led30:
         type: grb
         number: 30
-        tags: led_all, led_drop3
+        tags: led_all, led_drop3, led_drops
     l_led31:
         type: grb
         number: 31
-        tags: led_all, led_drop4
+        tags: led_all, led_drop4, led_drops
     l_led32:
         type: grb
         number: 32
