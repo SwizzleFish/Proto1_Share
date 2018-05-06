@@ -1,6 +1,6 @@
 events:
   game_ended: 562
-  game_started: 1400
+  game_started: 1403
 player:
   score:
     average: 150887.24570446747
@@ -33,7 +33,7 @@ shots:
   shot_l_rampentry_l: 246
   shot_l_rampentry_r: 253
   shot_l_sling: 2764
-  shot_l_spinner: 12539
+  shot_l_spinner: 12559
   shot_left_ramp_enter: 83
   shot_left_ramp_exit: 58
   shot_leftramp: 66
@@ -45,6 +45,7 @@ shots:
   shot_r_ramp: 36
   shot_r_sling: 2413
   shot_r_spinner: 8498
+  shot_right_ramp: 1
   shot_ring: 33
   shot_ring1: 359
   shot_ring2: 225
@@ -55,6 +56,9 @@ shots:
   shot_rollover_l: 136
   shot_rollover_r: 102
   shot_rspinner: 2803
+  skillshot_captivestack: 1
+  skillshot_drop: 1
+  skillshot_ramp: 1
 switches:
   s_2-8: 70
   s_behindupflip: 0
@@ -85,15 +89,15 @@ switches:
   s_l_ramp_exit: 3247
   s_l_rampenter: 580
   s_l_rampentry: 149
-  s_l_rampentry_L: 35
+  s_l_rampentry_L: 38
   s_l_rampentry_R: 25
   s_l_rampentry_l: 1221
   s_l_rampentry_r: 1312
   s_l_rampexit: 453
   s_l_sling: 4155
-  s_l_spinner: 18107
+  s_l_spinner: 18127
   s_launch: 3201
-  s_plunger_lane: 3540
+  s_plunger_lane: 3542
   s_r_19: 56
   s_r_22: 7
   s_r_behindflip: 535
@@ -101,9 +105,9 @@ switches:
   s_r_captive_02: 926
   s_r_inlane: 1808
   s_r_outlane: 712
-  s_r_ramp: 263
+  s_r_ramp: 264
   s_r_ramp2entry: 227
-  s_r_ramp_entry: 1296
+  s_r_ramp_entry: 1297
   s_r_ramp_entry_1: 214
   s_r_ramp_exit: 26
   s_r_rampentry: 164
@@ -130,6 +134,6 @@ switches:
   s_start: 377
   s_trough_1: 4061
   s_trough_2: 2974
-  s_trough_3: 3181
+  s_trough_3: 3183
   s_trough_4: 379
   s_trough_jam: 2788

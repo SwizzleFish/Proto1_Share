@@ -53,13 +53,11 @@ achievements:
         reset_events: playfield_active
 
     skill_captive:
-        show_tokens:
-            led: led_r_captive
         show_when_enabled: off
-        show_when_selected: flash_rainbow
+        show_when_selected: captivering_skillshow
         show_when_completed: off
         complete_events: s_r_captive_01_active
-        events_when_completed: award_captiveskillshot 
+        events_when_completed: award_captiveskillshot_02
         reset_events: playfield_active
       
     skill_drop:
